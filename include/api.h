@@ -3,7 +3,4 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "vex.h"
-#include <iostream>
-#include <vector>
-#include <string>
+#include "visionconfig.h"
