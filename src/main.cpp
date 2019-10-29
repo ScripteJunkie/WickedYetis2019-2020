@@ -1,3 +1,12 @@
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// ---- END VEXCODE CONFIGURED DEVICES ----
 // To complete the VEXcode V5 Text project upgrade process, please follow the
 // steps below.
 // 
@@ -17,14 +26,15 @@
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 #include "vex.h"
+#include "api.h"
 
 using namespace vex;
 
-int main() {
+//int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
-  vexcodeInit();
+//  vexcodeInit();
   
-}
+//}
 
 // // ---- START VEXCODE CONFIGURED DEVICES ----
 // // Robot Configuration:
@@ -38,9 +48,10 @@ int main() {
 // /*    Description:  V5 project                                                */
 // /*                                                                            */
 // /*----------------------------------------------------------------------------*/
- #include "vex.h"
- #include "robot-config.h"
- #include "visionconfig.h"
+// #include "vex.h"
+// #include "robot-config.h"
+
+// #include "visionconfig.h"
 // 
  using namespace vex;
  using namespace std;
