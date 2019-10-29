@@ -77,3 +77,8 @@ using namespace vex;
      }  
 };
 // 
+void autonomous( void ) {
+#include "visionconfig.h"
+
+
+}
