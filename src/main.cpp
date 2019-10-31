@@ -146,3 +146,8 @@ int count = 0;
      }  
 };
 // 
+void autonomous( void ) {
+#include "visionconfig.h"
+
+
+}
