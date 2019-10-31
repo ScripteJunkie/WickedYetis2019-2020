@@ -71,7 +71,7 @@ using namespace vex;
  	      motor_R1.spin(directionType::fwd, (controlmain.Axis3.value() - controlmain.Axis4.value())/2, velocityUnits::pct);//(Axis3-Axis4)/2;
          motor_L2.spin(directionType::fwd, (controlmain.Axis3.value() + controlmain.Axis4.value())/2, velocityUnits::pct); //(Axis3+Axis4)/2;
  	      motor_R2.spin(directionType::fwd, (controlmain.Axis3.value() - controlmain.Axis4.value())/2, velocityUnits::pct);//(Axis3-Axis4)/2;
-// // waits 10ms befroe update and allow other tasks to run
+// // waits 10ms before update and allow other tasks to run
          task::sleep(10);
          //disp();
      }  
@@ -79,6 +79,9 @@ using namespace vex;
 // 
 void autonomous( void ) {
 #include "visionconfig.h"
-
+          motor_L1.spin(directionType::fwd, (controlmain.Axis3.value() + controlmain.Axis4.value())/2, velocityUnits::pct); //(Axis3+Axis4)/2;
+        motor_R1.spin(directionType::fwd, (controlmain.Axis3.value() - controlmain.Axis4.value())/2, velocityUnits::pct);//(Axis3-Axis4)/2; 
+          motor_L2.spin(directionType::fwd, (controlmain.Axis3.value() + controlmain.Axis4.value())/2, velocityUnits::pct); //(Axis3+Axis4)/2;
+ 	      motor_R2.spin(directionType::fwd, (controlmain.Axis3.value() - controlmain.Axis4.value())/2, velocityUnits::pct);//(Axis3-Axis4)/2;
 
 }
