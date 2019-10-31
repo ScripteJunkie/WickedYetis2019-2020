@@ -1,6 +1,73 @@
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
 // [Name]               [Type]        [Port(s)]
+// motor_R1             motor         1               
+// motor_R2             motor         10              
+// motor_L1             motor         11              
+// motor_L2             motor         20              
+// Controller1          controller                    
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// motor_R1             motor         1               
+// motor_R2             motor         10              
+// motor_L1             motor         11              
+// motor_L2             motor         20              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// motor_R1             motor         1               
+// motor_R2             motor         10              
+// motor_L1             motor         11              
+// motor_L2             motor         20              
+// Controller1          controller                    
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// motor_R1             motor         1               
+// motor_R2             motor         10              
+// motor_L1             motor         11              
+// motor_L2             motor         20              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// motor_R1             motor         1               
+// motor_R2             motor         10              
+// motor_L1             motor         11              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// motor_R1             motor         1               
+// motor_R2             motor         10              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// motor_R1             motor         1               
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Controller1          controller                    
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// Drivetrain           drivetrain    20, 10          
+// ---- END VEXCODE CONFIGURED DEVICES ----
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
 // ---- END VEXCODE CONFIGURED DEVICES ----
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
@@ -53,26 +120,28 @@ using namespace vex;
 
 // #include "visionconfig.h"
 // 
- using namespace vex;
- using namespace std;
+// using namespace vex;
+// using namespace std;
 // 
  // gloabal variables
- static int count  = 0;
+int count = 0;
+
 // 
  // functions go here
  void disp() {
- Brain.Screen.printAt( 20, 50, "What's Poppin' Gang Gang? %d", count++);
+ Brain.Screen.printAt( 20, 50, "Wow");
  };
  
 // // define your global instances of motors and other devices here
  int main() {
+   
      while (true) {
-         motor_L1.spin(directionType::fwd, (controlmain.Axis3.value() + controlmain.Axis4.value())/2, velocityUnits::pct); //(Axis3+Axis4)/2;
- 	      motor_R1.spin(directionType::fwd, (controlmain.Axis3.value() - controlmain.Axis4.value())/2, velocityUnits::pct);//(Axis3-Axis4)/2;
-         motor_L2.spin(directionType::fwd, (controlmain.Axis3.value() + controlmain.Axis4.value())/2, velocityUnits::pct); //(Axis3+Axis4)/2;
- 	      motor_R2.spin(directionType::fwd, (controlmain.Axis3.value() - controlmain.Axis4.value())/2, velocityUnits::pct);//(Axis3-Axis4)/2;
-// // waits 10ms befroe update and allow other tasks to run
-         task::sleep(10);
+        motor_L1.spin(directionType::fwd, (Controller1.Axis4.value() - Controller1.Axis3.value())/2, velocityUnits::pct); //(Axis3+Axis4)/2;
+ 	      motor_R1.spin(directionType::fwd, (Controller1.Axis4.value() + Controller1.Axis3.value())/2, velocityUnits::pct);//(Axis3-Axis4)/2;
+        motor_L2.spin(directionType::fwd, (Controller1.Axis4.value() - Controller1.Axis3.value())/2, velocityUnits::pct); //(Axis3+Axis4)/2;
+ 	      motor_R2.spin(directionType::fwd, (Controller1.Axis4.value() + Controller1.Axis3.value())/2, velocityUnits::pct);//(Axis3-Axis4)/2;
+        // waits 10ms befroe update and allow other tasks to run
+        task::sleep(10);
          //disp();
      }  
 };
