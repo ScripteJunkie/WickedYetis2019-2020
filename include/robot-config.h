@@ -8,6 +8,7 @@ extern motor motor_R2;
 extern motor motor_L1;
 extern motor motor_L2;
 extern controller Controller1;
+extern motor motor_liftL;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Text.
