@@ -2,6 +2,7 @@
 
 void autonomous( void ) {
   #include "visionconfig.h"
-    driveForward( 2 * 12 ); // drive forwards
-    driveForward(-2 * 12 ); // drive backwards
+  
+  driveForward( 2 * 12 ); // drive forwards
+  driveForward(-2 * 12 ); // drive backwards
 }

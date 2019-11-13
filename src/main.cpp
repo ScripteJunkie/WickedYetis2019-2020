@@ -39,7 +39,6 @@
 // Motor12              motor         12              
 // ---- END VEXCODE CONFIGURED DEVICES ----
 #include "vex.h"
-//#include "api.h"
 #include "autonomous.h"
 using namespace vex;
  
@@ -64,14 +63,14 @@ int count = 0;
           task::sleep(30);
         }
         else {
-          motor_liftL.setBrake(brakeType::brake);
+          motor_liftL.setBrake(brakeType::hold);
         }
                 if (Controller1.ButtonL2.pressing()) {
           motor_liftL.spin(directionType::fwd, -5, velocityUnits::pct);
           task::sleep(30);
         }
         else {
-          motor_liftL.setBrake(brakeType::brake);
+          motor_liftL.setBrake(brakeType::hold);
         }
         // waits 10ms befroe update and allow other tasks to run
         task::sleep(10);
