@@ -14,6 +14,8 @@ motor motor_L1 = motor(PORT11, ratio18_1, false);
 motor motor_L2 = motor(PORT20, ratio18_1, false);
 controller Controller1 = controller(primary);
 motor motor_liftL = motor(PORT12, ratio18_1, false);
+motor IntakeL = motor(PORT2, ratio18_1, false);
+motor IntakeR = motor(PORT3, ratio18_1, false);
 
 // VEXcode generated functions
 
